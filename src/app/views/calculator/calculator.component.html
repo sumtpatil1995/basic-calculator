@@ -1,0 +1,18 @@
+<section>
+    <h1>Basic Calculator</h1>
+    <form id="cal-form">
+      <input placeholder="Enter First value" autofocus type="number" name="firstValue" id="firstValue" [(ngModel)]="firstValue" (keydown)="$event.keyCode !== 69">
+      <input [value]="currentSign" type="text" name="sign" id="sign">
+      <input placeholder="Enter Second value" type="number" name="secondValue" id="secondValue" [(ngModel)]="secondValue" (keydown)="$event.keyCode !== 69">
+      <section class="symbols">
+        <input type="button" value="+" (click)=" onUserAction('+')">
+        <input type="button" value="-" (click)=" onUserAction('-')">
+        <input type="button" value="x" (click)=" onUserAction('x')">
+        <input type="button" value="/" (click)=" onUserAction('/')">
+        <input type="button" value="clear" (click)="onClear()">
+      </section>
+      <input type="number" name="ans" id="ans" [(ngModel)]="ans" disabled>
+    </form>
+  </section>
+  
+  
